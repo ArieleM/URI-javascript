@@ -1,12 +1,8 @@
 var input = require('fs').readFileSync('./stdin', 'utf8');
 var lines = input.split('\n');
 
-console.log(lines);
-var [A,B,C] = lines[0].split(" ").map(item => parseFloat(item));
+var [X,Y] = lines
 
-var maiorAB = (A + B + Math.abs(A - B))/2;
-if(C> maiorAB){
-    maiorAB = C
-}
+let consumo = X / Y;
 
-console.log(`${maiorAB} eh o maior`);
+console.log(`${consumo.toFixed(3)} km/l`);
